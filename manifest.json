@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Yamini Extension",
+  "description": "Enable copy/paste and Ctrl shortcuts on restricted sites; bulk fill matching form fields.",
+  "version": "1.0.0",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Yamini Extension",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

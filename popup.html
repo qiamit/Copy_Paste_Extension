@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yamini Extension</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Yamini Extension</h1>
+
+      <label class="toggle">
+        <input id="enableBypass" type="checkbox" />
+        <span>Enable copy/paste bypass</span>
+      </label>
+
+      <label class="toggle">
+        <input id="enableCtrlBypass" type="checkbox" />
+        <span>Enable Ctrl key bypass (Ctrl/Cmd+C, X, V, A on fields)</span>
+      </label>
+
+      <div class="form">
+        <label for="fieldName">Field name</label>
+        <input id="fieldName" type="text" placeholder="e.g. email" />
+
+        <label for="fieldValue">Value</label>
+        <textarea id="fieldValue" rows="3" placeholder="Enter value"></textarea>
+
+        <button id="fillButton" type="button">Fill Matching Fields</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
