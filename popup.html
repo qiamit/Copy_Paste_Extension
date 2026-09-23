@@ -3,32 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yamini Extension</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Manak Online Extension</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
-    <main class="container">
-      <h1>Yamini Extension</h1>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand-row">
+          <span class="mark" aria-hidden="true">M</span>
+          <div>
+            <h1>Manak Online Extension</h1>
+          </div>
+        </div>
+      </header>
 
-      <label class="toggle">
-        <input id="enableBypass" type="checkbox" />
-        <span>Enable copy/paste bypass</span>
-      </label>
+      <section class="panel" aria-labelledby="settingsTitle">
+        <div class="panel-head">
+          <h2 id="settingsTitle">Quick controls</h2>
+        </div>
+        <div class="toggle-grid">
+          <label class="tile" for="enableBypass">
+            <span class="tile-top">
+              <span class="tile-title">Copy / Paste</span>
+              <span class="switch">
+                <input id="enableBypass" type="checkbox" />
+                <span class="slider"></span>
+              </span>
+            </span>
+          </label>
 
-      <label class="toggle">
-        <input id="enableCtrlBypass" type="checkbox" />
-        <span>Enable Ctrl key bypass (Ctrl/Cmd+C, X, V, A on fields)</span>
-      </label>
+          <label class="tile" for="enableCtrlBypass">
+            <span class="tile-top">
+              <span class="tile-title">Shortcuts</span>
+              <span class="switch">
+                <input id="enableCtrlBypass" type="checkbox" />
+                <span class="slider"></span>
+              </span>
+            </span>
+          </label>
+        </div>
+      </section>
 
-      <div class="form">
-        <label for="fieldName">Field name</label>
-        <input id="fieldName" type="text" placeholder="e.g. email" />
+      <section class="panel" aria-labelledby="fillTitle">
+        <div class="panel-head">
+          <h2 id="fillTitle">Bulk Fill</h2>
+        </div>
 
-        <label for="fieldValue">Value</label>
-        <textarea id="fieldValue" rows="3" placeholder="Enter value"></textarea>
+        <div class="field-row">
+          <div class="field">
+            <label for="fieldName">Field Name</label>
+            <input id="fieldName" type="text" placeholder="Field Name" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="fieldValue">Value</label>
+            <input id="fieldValue" type="text" placeholder="Type the Value" autocomplete="off" />
+          </div>
+        </div>
 
-        <button id="fillButton" type="button">Fill Matching Fields</button>
-      </div>
+        <button id="fillButton" type="button">
+          <span>Fill matching fields</span>
+        </button>
+      </section>
 
       <p id="status" class="status" aria-live="polite"></p>
     </main>

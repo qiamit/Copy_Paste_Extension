@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Yamini Extension",
+  "name": "Manak Online Extension",
   "description": "Enable copy/paste and Ctrl shortcuts on restricted sites; bulk fill matching form fields.",
   "version": "1.0.0",
   "permissions": ["storage", "activeTab", "scripting", "tabs"],
@@ -9,7 +9,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Yamini Extension",
+    "default_title": "Manak Online Extension",
     "default_popup": "popup.html"
   },
   "content_scripts": [

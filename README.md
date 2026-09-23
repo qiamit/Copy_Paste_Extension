@@ -1,4 +1,4 @@
-# Copy/Paste + Bulk Fill Helper (Chrome Extension)
+# Manak Online Extension
 
 This extension does two things:
 
